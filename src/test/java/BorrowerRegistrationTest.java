@@ -22,7 +22,6 @@ public class BorrowerRegistrationTest {
 
     @BeforeTest
     public void setupClass() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Magdalena\\selenium-java-3.141.59\\chromedriver.exe");
         loanInfoBean = new LoanInfoBean();
         personalInfoBean = new PersonalInfoBean(email);
         driver = new ChromeDriver();
