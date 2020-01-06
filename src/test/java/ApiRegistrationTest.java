@@ -1,12 +1,11 @@
 import com.jayway.restassured.RestAssured;
 import org.hamcrest.core.Is;
-import org.springframework.context.annotation.Description;
 import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
 import java.util.UUID;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ApiRegistration  {
+public class ApiRegistrationTest {
 
     private String jsonBody = "{\"username\": \"coding.challenge.login@upgrade.com\", \"password\": \"On$3XcgsW#9q\"}";
 
@@ -63,6 +62,5 @@ public class ApiRegistration  {
                 .and().assertThat().statusCode(is(equalTo(401)))
                 .and().assertThat().body("httpStatus", Is.is("UNAUTHORIZED"))
                 .and().extract().body().asString();
-
     }
 }

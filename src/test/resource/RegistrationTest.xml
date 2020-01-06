@@ -3,8 +3,8 @@
 <suite name="Test">
     <test name="Test">
         <classes>
-            <class name="BorrowerRegistration"/>
-            <class name="ApiRegistration"/>
+            <class name="BorrowerRegistrationTest"/>
+            <class name="ApiRegistrationTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

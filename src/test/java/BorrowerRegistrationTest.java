@@ -12,17 +12,17 @@ import org.testng.annotations.*;
 
 import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 
-public class BorrowerRegistration {
+public class BorrowerRegistrationTest {
 
     private LoanInfoBean loanInfoBean;
     private PersonalInfoBean personalInfoBean;
     private String email = "candidate" + RandomStringUtils.randomNumeric(5) + "@upgrade-challenge.com";
-    WebDriver driver;
+    private WebDriver driver;
     private OfferPage offerPage;
 
     @BeforeTest
     public void setupClass() {
-
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Magdalena\\selenium-java-3.141.59\\chromedriver.exe");
         loanInfoBean = new LoanInfoBean();
         personalInfoBean = new PersonalInfoBean(email);
         driver = new ChromeDriver();
