@@ -1,6 +1,6 @@
-import API.PostRequest;
 import com.jayway.restassured.RestAssured;
 import org.hamcrest.core.Is;
+import org.springframework.context.annotation.Description;
 import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
 import java.util.UUID;
@@ -10,7 +10,7 @@ public class ApiRegistration  {
 
     private String jsonBody = "{\"username\": \"coding.challenge.login@upgrade.com\", \"password\": \"On$3XcgsW#9q\"}";
 
-    @Test
+    @Test(description = "Validation with correct credentials")
     public void validateCorrectCredentials() {
         String body = RestAssured
                 .given()
@@ -27,7 +27,7 @@ public class ApiRegistration  {
                 .and().extract().body().asString();
     }
 
-    @Test
+    @Test(description = "Validation on Product Type")
     public void validateValuesOnPayload(){
         String body = RestAssured
                 .given()
@@ -45,7 +45,7 @@ public class ApiRegistration  {
                 .and().extract().body().asString();
     }
 
-    @Test
+    @Test(description = "Validation with wrong credentials")
     public void validateWrongCredentials() {
         String wrongJsonBody = "{\"username\": \"coding.wrong.login@upgrade.com\", \"password\": \"On$3XcgsW#9q\"}";
         String body = RestAssured
@@ -65,15 +65,4 @@ public class ApiRegistration  {
                 .and().extract().body().asString();
 
     }
-
-    /*
-    private String generatePayload(){
-        String user = "coding.challenge.login@upgrade.com";
-        String password = "On$3XcgsW#9q";
-
-        PostRequest postRequest = new PostRequest(user, password);
-        String response = postRequest.getResponse();
-        return response;
-    }
-     */
 }

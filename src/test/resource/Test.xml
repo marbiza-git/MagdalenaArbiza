@@ -4,6 +4,7 @@
     <test name="Test">
         <classes>
             <class name="BorrowerRegistration"/>
+            <class name="ApiRegistration"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

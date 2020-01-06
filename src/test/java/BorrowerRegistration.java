@@ -25,7 +25,6 @@ public class BorrowerRegistration {
 
         loanInfoBean = new LoanInfoBean();
         personalInfoBean = new PersonalInfoBean(email);
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Magdalena\\selenium-java-3.141.59\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
