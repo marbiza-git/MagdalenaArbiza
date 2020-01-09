@@ -1,66 +1,65 @@
-import com.jayway.restassured.RestAssured;
-import org.hamcrest.core.Is;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.json.simple.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.hamcrest.Matchers.*;
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import java.util.UUID;
-import static org.hamcrest.Matchers.equalTo;
 
 public class ApiRegistrationTest {
 
-    private String jsonBody = "{\"username\": \"coding.challenge.login@upgrade.com\", \"password\": \"On$3XcgsW#9q\"}";
+    private static String url = "https://credapi.credify.tech/api/brportorch/v2/login";
+    private static final String username = "username";
+    private static final String usernameValue = "coding.challenge.login@upgrade.com";
+    private static final String password = "password";
+    private static final String passwordValue = "On$3XcgsW#9q";
+    private static final String wrongUsernameValue = "wrong.login@upgrade.com";
+    private JSONObject jsonObject;
+    private RequestSpecification request;
 
     @Test(description = "Validation with correct credentials")
     public void validateCorrectCredentials() {
-        String body = RestAssured
-                .given()
-                    .baseUri("https://credapi.credify.tech/api/brportorch/v2/login")
-                .header("x-cf-source-id", "coding-challenge")
-                .header("x-cf-corr-id", UUID.randomUUID())
-                .header("Content-Type","application/json")
-                .body(jsonBody)
-                .when()
-                .post("/")
-                .then()
-                .log().all()
-                .and().assertThat().statusCode(is(equalTo(200)))
-                .and().extract().body().asString();
+
+        initAPI(usernameValue, passwordValue);
+        Response response = request.post(url);
+
+        Assert.assertTrue(response.getStatusCode()==200);
+        LOGGER.info("Status code is OK: " + response.getStatusCode());
     }
 
     @Test(description = "Validation on Product Type")
     public void validateValuesOnPayload(){
-        String body = RestAssured
-                .given()
-                .baseUri("https://credapi.credify.tech/api/brportorch/v2/login")
-                .and()
-                .header("x-cf-source-id", "coding-challenge")
-                .header("x-cf-corr-id", UUID.randomUUID())
-                .header("Content-Type","application/json")
-                .body(jsonBody)
-                .when()
-                .post("/")
-                .then().log().all()
-                .and().assertThat().statusCode(is(equalTo(200)))
-                .and().assertThat().body("loansInReview.productType[0]", Is.is("PERSONAL_LOAN"))
-                .and().extract().body().asString();
+
+        initAPI(usernameValue, passwordValue);
+        Response response = request.post(url);
+
+        Assert.assertEquals(response.path("loansInReview.productType[0]"), "PERSONAL_LOAN");
+        LOGGER.info("Product Type is OK: " + response.path("loansInReview.productType[0]"));
     }
 
     @Test(description = "Validation with wrong credentials")
     public void validateWrongCredentials() {
-        String wrongJsonBody = "{\"username\": \"coding.wrong.login@upgrade.com\", \"password\": \"On$3XcgsW#9q\"}";
-        String body = RestAssured
-                .given()
-                .baseUri("https://credapi.credify.tech/api/brportorch/v2/login")
-                .and()
-                .header("x-cf-source-id", "coding-challenge")
-                .header("x-cf-corr-id", UUID.randomUUID())
-                .header("Content-Type","application/json")
-                .body(wrongJsonBody)
-                .when()
-                .post("/")
-                .then()
-                .log().all()
-                .and().assertThat().statusCode(is(equalTo(401)))
-                .and().assertThat().body("httpStatus", Is.is("UNAUTHORIZED"))
-                .and().extract().body().asString();
+
+        initAPI(wrongUsernameValue, passwordValue);
+        Response response = request.post(url);
+
+        Assert.assertTrue(response.getStatusCode()==401);
+        Assert.assertEquals(response.path("httpStatus"), "UNAUTHORIZED");
+
+        LOGGER.info("Status code is OK : " + response.getStatusCode() );
+        LOGGER.info("Http Status is OK : " + response.path("httpStatus"));
+    }
+
+    public void initAPI(String user, String pass){
+        jsonObject = new JSONObject();
+        jsonObject.put(username, user);
+        jsonObject.put(password, pass);
+
+        request = RestAssured.given();
+        request.header("x-cf-source-id", "coding-challenge");
+        request.header("x-cf-corr-id", UUID.randomUUID().toString());
+        request.header("Content-Type","application/json");
+        request.body(jsonObject.toJSONString());
     }
 }

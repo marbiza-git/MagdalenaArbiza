@@ -22,6 +22,7 @@ public class BorrowerRegistrationTest {
 
     @BeforeTest
     public void setupClass() {
+        System.setProperty("webdriver.chrome.driver",".//webDriver//chromedriver.exe");
         loanInfoBean = new LoanInfoBean();
         personalInfoBean = new PersonalInfoBean(email);
         driver = new ChromeDriver();
@@ -32,8 +33,8 @@ public class BorrowerRegistrationTest {
         driver.quit();
     }
 
-    @Test(description = "Upgrade_exercise")
-    public void startRegistration() throws InterruptedException {
+    @Test(description = "Validation on Offers Page after sign out/in")
+    public void registrationTest() throws InterruptedException {
 
         NonDMFunnelPage nonDMFunnelPage = new NonDMFunnelPage(driver);
         nonDMFunnelPage.checkYourRate(driver, loanInfoBean);
