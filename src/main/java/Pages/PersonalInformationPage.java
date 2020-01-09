@@ -18,13 +18,7 @@ public class PersonalInformationPage {
                 + purpose + "/" + amount + "?step=contact";
         driver.get(url);
     }
-/*
-    public void selectIsJointApp(boolean isJoint){
-        if(isJoint)
-            jointOpt.click();
-        indivOpt.click();
-    }
-*/
+    
     public void setFirstName(String fname){
         driver.findElement(By.name("borrowerFirstName")).sendKeys(fname);
     }
