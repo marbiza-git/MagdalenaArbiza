@@ -1,10 +1,10 @@
-import PageBeans.LoanInfoBean;
-import PageBeans.PersonalInfoBean;
-import Pages.LogInPage;
-import Pages.NonDMFunnelPage;
-import Pages.OfferPage;
-import Pages.PersonalInformationPage;
-import org.apache.commons.lang.RandomStringUtils;
+import beans.LoanInfoBean;
+import beans.PersonalInfoBean;
+import pages.LogInPage;
+import pages.NonDMFunnelPage;
+import pages.OfferPage;
+import pages.PersonalInformationPage;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -53,7 +53,7 @@ public class BorrowerRegistrationTest {
         offerPage.signOut();
 
         LogInPage logInPage = new LogInPage(driver);
-        logInPage.SignIn(personalInfoBean);
+        logInPage.signIn(personalInfoBean);
 
         offerPage = new OfferPage(driver);
 
@@ -65,5 +65,4 @@ public class BorrowerRegistrationTest {
 
         LOGGER.info("All the values are the same. Working as expected.");
     }
-
 }
