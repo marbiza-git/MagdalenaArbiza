@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cca6f07-8e44-4202-b489-76d1c81dfbaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/io_rest_assured_rest_assured_4_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageBeans/LoanInfoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/LoanInfoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageBeans/PersonalInfoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/PersonalInfoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LogInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/NonDMFunnelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/NonDMFunnelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/OfferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OfferPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/PersonalInformationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PersonalInformationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ApiRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ApiRegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BorrowerRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BorrowerRegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageBeans/LoanInfoBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageBeans/PersonalInfoBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/LogInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/LogInPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/NonDMFunnelPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/NonDMFunnelPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/OfferPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/OfferPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/PersonalInformationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/PersonalInformationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ApiRegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ApiRegistrationTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/BorrowerRegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BorrowerRegistrationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webDriver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/webDriver/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,8 +115,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.BorrowerRegistrationTest.registrationTest" />
-        <item itemvalue="TestNG.ApiRegistrationTest" />
         <item itemvalue="TestNG.ApiRegistrationTest.validateWrongCredentials" />
+        <item itemvalue="TestNG.ApiRegistrationTest" />
         <item itemvalue="TestNG.BorrowerRegistrationTest" />
         <item itemvalue="TestNG.ApiRegistrationTest.validateValuesOnPayload" />
       </list>
@@ -198,38 +180,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="650" y="317" width="354" height="168" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1576350463580" />
-    <state width="1493" height="276" key="GridCell.Tab.0.bottom" timestamp="1579612728845">
+    <state width="1493" height="256" key="GridCell.Tab.0.bottom" timestamp="1579655906932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579612728845" />
-    <state width="1493" height="276" key="GridCell.Tab.0.center" timestamp="1579612728845">
+    <state width="1493" height="256" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579655906932" />
+    <state width="1493" height="256" key="GridCell.Tab.0.center" timestamp="1579655906931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579612728845" />
-    <state width="1493" height="276" key="GridCell.Tab.0.left" timestamp="1579612728845">
+    <state width="1493" height="256" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579655906931" />
+    <state width="1493" height="256" key="GridCell.Tab.0.left" timestamp="1579655906931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579612728845" />
-    <state width="1493" height="276" key="GridCell.Tab.0.right" timestamp="1579612728845">
+    <state width="1493" height="256" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579655906931" />
+    <state width="1493" height="256" key="GridCell.Tab.0.right" timestamp="1579655906932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="276" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579612728845" />
-    <state width="1493" height="256" key="GridCell.Tab.1.bottom" timestamp="1579548068926">
+    <state width="1493" height="256" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579655906932" />
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom" timestamp="1579655906933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="256" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579548068926" />
-    <state width="1493" height="256" key="GridCell.Tab.1.center" timestamp="1579548068926">
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579655906933" />
+    <state width="1493" height="256" key="GridCell.Tab.1.center" timestamp="1579655906932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="256" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579548068926" />
-    <state width="1493" height="256" key="GridCell.Tab.1.left" timestamp="1579548068926">
+    <state width="1493" height="256" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579655906932" />
+    <state width="1493" height="256" key="GridCell.Tab.1.left" timestamp="1579655906932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="256" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579548068926" />
-    <state width="1493" height="256" key="GridCell.Tab.1.right" timestamp="1579548068926">
+    <state width="1493" height="256" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579655906932" />
+    <state width="1493" height="256" key="GridCell.Tab.1.right" timestamp="1579655906932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="256" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579548068926" />
+    <state width="1493" height="256" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579655906932" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1578079467376">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
